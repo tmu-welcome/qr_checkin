@@ -1,0 +1,338 @@
+* {
+    padding:0;
+    margin:0;
+    font-size: 12px;
+}
+:root{
+    --main-color-green:#3bb25e;
+    --main-color-black:#141414;
+    --bg-color:#fcfcfc;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans", Meiryo, sans-serif;
+    width:100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    color:var(--main-color-black);
+}
+h1{
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+p,span,a, a:link, a:visited, a:active {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color:var(--main-color-black);
+}
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+.container{
+    padding: 0 30px;
+    padding-bottom: 10rem;
+    position: relative;
+    z-index: 1;
+}
+.container *{
+    z-index: 1;
+}
+.panel_wrapper{
+    width: 100%;
+}
+
+.panel_container{
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,0.95);
+
+}
+.panel_card{
+    border-radius: 30px;
+    filter: drop-shadow(0 0 10px rgba(20,20,20,0.2));
+}
+.panel{
+    width: 100%;
+}
+.panel_hide{
+    display: none;
+}
+.panel h1{
+    text-align: center;
+}
+.panel_sub{
+    margin-top: 2rem;
+}
+.panel_top{
+    margin-top: 20px;
+}
+.panel_heading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--main-color-green);
+}
+.panel_heading img{
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.panel_header{
+    text-align: center;
+    margin-top: 0px;
+    border-radius: 0px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-bottom: 40px;
+}
+.panel_header *{
+    font-size: 1.5rem;
+    color: var(--main-color-green);
+}
+
+footer{
+    position:fixed;
+    bottom: 0px;
+    width:100%;
+    z-index: 5;
+}
+.f_container{
+    margin: 0px 10px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 5px;
+    background-color: rgba(66, 66, 66,0.2);
+}
+.panel_footer{
+    width: 100%;
+    display: flex;
+}
+.f_item{
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+.f_item_main{
+    flex-grow: 3;
+    color:var(--main-color-green);
+    border-style: solid;
+    border-width: 10px;
+    border-color: var(--main-color-green);
+}
+.f_item_main *{
+    color:var(--main-color-green);
+}
+.f_icon, f_counter{
+    height:2.5rem;
+    margin-bottom: 5px;
+}
+.f_small{
+    font-size: 0.8rem;
+    text-align: center;
+}
+.f_counter{
+    font-size: 3rem;
+}
+.button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 5px;
+    color: var(--main-color-green);
+}
+.button_pop{
+    box-shadow: rgba(0,0,0,0.3) 5px 5px;
+    transition:box-shadow 0.5s;
+    cursor: pointer;
+}
+.button_pop:hover{
+    box-shadow: none;
+}
+
+.centered{
+    text-align: center;
+}
+.svg_green{
+    filter: invert(53%) sepia(85%) saturate(393%) hue-rotate(85deg) brightness(95%) contrast(77%);
+}
+.svg_red{
+    filter: invert(29%) sepia(61%) saturate(5059%) hue-rotate(337deg) brightness(103%) contrast(94%);
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 50px;
+    padding: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #25b09b;
+    --_m: 
+      conic-gradient(#0000 10%,#000),
+      linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    -webkit-mask-composite: source-out;
+            mask-composite: subtract;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {to{transform: rotate(1turn)}
+}
+
+.modal_full{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: opacity 0.5s;
+}
+.modal_icon{
+    height: 3rem;
+    margin: 3rem;
+}
+.modal_header{
+    margin-bottom:2rem;
+}
+.modal_div{
+    margin-bottom: 2rem;
+}
+.modal_loader{
+    height:3rem;
+    width: 3rem;
+    margin: 3rem;
+}
+
+.landscape_wrapper{
+    display: none;
+    z-index: 25;
+}
+.error_wrapper{
+    z-index: 21;
+}
+.checkin_wrapper{
+    z-index: 20;
+}
+.loading_wrapper{
+    z-index: 18;
+}
+.index_wrapper{
+    z-index:3;
+}
+.modal_hide{
+    display: none;
+    opacity: 0;
+}
+.modal_show{
+    display: flex;
+    opacity: 1;
+}
+
+.form_wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.form_button{
+    background-color: var(--main-color-green);
+    color: white;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    border-radius: 3rem;
+    border-style: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.form_button:hover{
+    background-color: white;
+    color: var(--main-color-green)
+}
+.form_textarea{
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.anim_rise{
+    animation: anikey-rise 0.5s ease-in-out forwards normal;
+}
+
+.anim_rise_delay{
+    opacity: 0;
+    animation: anikey-rise 0.5s ease-in-out 1s forwards normal;
+}
+
+@keyframes anikey-rise{
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.anim_fadeout_none{
+    animation: anikey-fadeout-none 0.5s linear forwards normal;
+}
+
+@keyframes anikey-fadeout-none{
+    0%{
+        opacity: 1;
+    }
+    99%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+.anim_fadein{
+    animation: anikey-fadein 0.5s linear forwards normal;
+}
+
+@keyframes anikey-fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@media screen and (min-width:700px){
+    *{
+        font-size: 15px;
+    }
+}
+@media (orientation:landscape){
+    .landscape_wrapper{
+        display: flex;
+    }
+}

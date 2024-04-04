@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script type="text/javascript" src="js/processAID.js"></script>
+        <script type="text/javascript" src="js/cookieControl.js"></script>
+        <script type="text/javascript" src="js/serverAction.js"></script>
+        <script defer type="text/javascript" src="js/uiControl.js"></script>
+        <script defer type="text/javascript" src="js/postCheckin.js"></script>
+    </header>
+    <body>
+        <div class="landscape_wrapper modal_full">
+            <img class="modal_icon" src="img/fontawesome/exclamation-solid.svg">
+            <h1>端末を縦にしてご利用ください</h1>
+        </div>
+        <div class="error_wrapper modal_full modal_hide" id="error-modal">
+            <h1>エラー</h1>
+            <img class="modal_icon svg_red" src="img/fontawesome/exclamation-solid.svg">
+            <h3 id="error-text">Error Text</h3>
+        </div>
+        <div class="checkin_wrapper modal_full modal_hide" id="checkin-modal">
+            <h1>チェックインしました！</h1>
+            <img class="modal_icon svg_green" src="img/fontawesome/circle-check-regular.svg">
+            <div class="modal_div">
+                <h3 id="place-text">場所：Place PlaceHolder</h3>
+                <h3 id="group-text">団体：Group PlaceHolder</h3>
+            </div>
+            <h2>ダッシュボードへ移動します</h2>
+        </div>
+        <div class="loading_wrapper modal_full modal_show" id="loading-modal">
+            <h1 id="loading-header">チェックイン中...</h1>
+            <div class="loader modal_loader"></div>
+            <div>
+                <span id="checkin-id-text">ID:dadasda</span>
+            </div>
+        </div>
+        <div class="bg"></div>
+        <div class="container">
+            <div class="panel_wrapper">
+            </div>
+        </div>
+        <footer>
+        </footer>
+    </body>
+</html>

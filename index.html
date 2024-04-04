@@ -1,5 +1,49 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    hello
-  </body>
+    <header>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </header>
+    <body>
+        <div class="index_wrapper modal_full modal_show">
+            <div class="container">
+                <div class="panel_wrapper">
+                    <div class="panel_container panel_top">
+                        <div class="panel">
+                            <div class="panel_heading">
+                                <img class="svg_green" src="img/fontawesome/qrcode-solid.svg">
+                                <h1>東京都立大学 サークル紹介 QRチェックイン</h1>
+                            </div>
+                            <p>QRコード下に記載している５文字のIDを入力してください</p>
+                            <form class="form_wrapper">
+                                <input class="form_textarea" type="text" placeholder="AAAAA" id="input-aid">
+                                <button type="button" class="form_button button_pop" id="btn-checkin">チェックイン</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg"></div>
+
+        <footer>
+            <div class="f_container">
+                <div class="panel_wrapper panel_footer">
+                    <div class="f_item f_counter_wrapper">
+                        <h2 class="f_counter" id="counter-num">00</h2>
+                        <small class="f_small">訪問ブース</small>
+                    </div>
+                    <a class="f_item f_web_wrapper f_item_main button_pop" href="https://shinkan.tmuzc.org/ccl_intro#map" target="_blank">
+                        <img class="f_icon svg_green" src="img/fontawesome/map-solid.svg">
+                        <h2>マップ・演目情報</h2>
+                    </a>
+                    <a class="f_item f_counter_wrapper button_pop" href="about.html" target="_blank">
+                        <img class="f_icon" src="img/fontawesome/circle-info-solid.svg">
+                        <small class="f_small">システム<br>について</small>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>
