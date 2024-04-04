@@ -73,6 +73,9 @@ p,span,a, a:link, a:visited, a:active {
 .panel_top{
     margin-top: 20px;
 }
+.panel_hide{
+    display:none;
+}
 .panel_heading{
     display: flex;
     flex-direction: row;
@@ -283,7 +286,7 @@ footer{
 
 .anim_rise_delay{
     opacity: 0;
-    animation: anikey-rise 0.5s ease-in-out 1s forwards normal;
+    animation: anikey-rise 0.5s ease-in-out 0.5s forwards normal;
 }
 
 @keyframes anikey-rise{
@@ -297,7 +300,7 @@ footer{
     }
 }
 
-.anim_fadeout_none{
+.anim_fadeout{
     animation: anikey-fadeout-none 0.5s linear forwards normal;
 }
 
@@ -305,12 +308,8 @@ footer{
     0%{
         opacity: 1;
     }
-    99%{
-        opacity: 0;
-    }
     100%{
         opacity: 0;
-        display: none;
     }
 }
 
@@ -324,6 +323,19 @@ footer{
     }
     100%{
         opacity: 1;
+    }
+}
+
+.anim_green{
+    animation: anikey-green 0.5s linear 0.5s forwards normal;
+}
+
+@keyframes anikey-green{
+    0%{
+        color:inherit
+    }
+    100%{
+        color:var(--main-color-green);
     }
 }
 @media screen and (min-width:700px){

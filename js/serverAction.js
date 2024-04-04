@@ -4,6 +4,10 @@ const serverPath = {
         "postCheckin": {
             "path": "PostCheckin.php",
             "method": "POST"
+        },
+        "getUserInfo": {
+            "path": "getUserInfo.php",
+            "method":"GET"
         }
     }
 }

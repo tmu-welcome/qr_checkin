@@ -3,6 +3,7 @@
     let state = checkAIDParam(param)
     if(state != 0) {
         showError(getAIDErrMsg(state))
+        movePage(page.index);
         return;
     }
     const aid = getAID(param)
@@ -13,6 +14,7 @@
 
     if (res.status != 0) {
         showError("サーバエラー:" + getServerErrorMsg(res.body.error));
+        movePage(page.index);
         return;
     }
 
