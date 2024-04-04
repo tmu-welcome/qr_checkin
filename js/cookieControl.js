@@ -1,5 +1,5 @@
 const uid_key = "uid"
-const count = "count"
+const count_key = "count"
 const cookie_expire = new Date("2024-05-01").toUTCString();
 
 function getCookieObject() {
@@ -28,4 +28,22 @@ function getUID() {
 
 function saveUID(uid) {
     document.cookie = `${uid_key}=${uid};expires=${cookie_expire}`
+}
+
+function getCount() {
+    let cookieObj = getCookieObject()
+    let res = 0
+    if (!count_key in cookieObj) {
+        return 0
+    }
+    try {
+        res = parseInt(cookieObj[count_key])
+    } catch (e) {
+        return 0
+    }
+    return res
+}
+
+function saveCount(count) {
+    document.cookie = `${count_key}=${count};expires=${cookie_expire}`
 }
