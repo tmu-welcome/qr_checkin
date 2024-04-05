@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <header>
+    <head>
         <meta charset="UTF-8"/>
+        <title>ダッシュボード | 東京都立大学 サークル紹介 QRチェックイン</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <script type="text/javascript" src="js/cookieControl.js"></script>
         <script type="text/javascript" src="js/serverAction.js"></script>
-        <script defer type="text/javascript" src="js/uiControl.js"></script>
-        <script defer type="text/javascript" src="js/getUserInfo.js"></script>
-    </header>
+        <script type="text/javascript" src="js/uiControl.js"></script>
+        <script type="text/javascript" src="js/getUserInfo.js"></script>
+    </head>
     <body>
         <div class="landscape_wrapper modal_full">
             <img class="modal_icon" src="img/fontawesome/exclamation-solid.svg">
@@ -18,7 +19,7 @@
             <h1>エラー</h1>
             <img class="modal_icon svg_red" src="img/fontawesome/exclamation-solid.svg">
             <h3 id="error-text">Error Text</h3>
-            <h2>ダッシュボードへ移動します</h2>
+            <h2>トップへ移動します</h2>
         </div>
         <div class="loading_wrapper modal_full modal_show" id="loading-modal">
             <h1 id="loading-header">Loading...</h1>
@@ -52,7 +53,7 @@
                         </div>
                         <p>あなたの学部と学科を教えてください！</p>
                         <div class="panel_sub">
-                            <a class="button button_pop">回答する</a>
+                            <a class="button button_pop" href="survey.html">回答する</a>
                         </div>              
                     </div>
                 </div>
@@ -77,7 +78,7 @@
                         <img class="f_icon svg_green" src="img/fontawesome/map-solid.svg">
                         <h2>マップ・演目情報</h2>
                     </a>
-                    <a class="f_item f_counter_wrapper button_pop" href="about.html" target="_blank">
+                    <a class="f_item f_counter_wrapper button_pop" href="about.html">
                         <img class="f_icon" src="img/fontawesome/circle-info-solid.svg">
                         <small class="f_small">システム<br>について</small>
                     </a>
