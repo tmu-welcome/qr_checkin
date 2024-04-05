@@ -1,6 +1,7 @@
 const page = {
     "dashboard": "dashboard.html",
-    "index":"index.html"
+    "index": "index.html",
+    "survey":"survey.html"
 }
 
 const uiClass = {
@@ -39,6 +40,9 @@ const uiID = {
                 "place": "place-text",
                 "group": "group-text"
             }
+        },
+        "done":{
+            "wrapper":"done-modal",
         }
     }
 }
@@ -116,8 +120,8 @@ function changeInnerHtml(id, text) {
 
 function movePage(dist) {
     fireEvent(() => {
-        setTimeout(() => {
-            location.href = dist
-        },2000)
+        setTimeout(async () => {
+            window.location.href = dist
+        },3000)
     })
 }

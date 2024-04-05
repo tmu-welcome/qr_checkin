@@ -8,6 +8,10 @@ const serverPath = {
         "getUserInfo": {
             "path": "getUserInfo.php",
             "method":"GET"
+        },
+        "postSurvey": {
+            "path": "postSurvey.php",
+            "method":"POST"
         }
     }
 }
@@ -23,6 +27,8 @@ const serverResponse = {
 const serverError = {
     "C_000": "AIDがありません",
     "C_001": "無効なAIDが送信されました",
+    "S_001": "不正なUIDが送信されました",
+    "S_002": "不正な値が送信されました",
 }
 
 function createRequestURL(act, params) {

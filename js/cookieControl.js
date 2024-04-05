@@ -20,7 +20,7 @@ function getCookieObject() {
 
 function getUID() {
     let cookieObj = getCookieObject()
-    if (!uid_key in cookieObj) {
+    if (!(uid_key in cookieObj)) {
         return ""
     }
     return cookieObj[uid_key]
@@ -33,7 +33,7 @@ function saveUID(uid) {
 function getCount() {
     let cookieObj = getCookieObject()
     let res = 0
-    if (!count_key in cookieObj) {
+    if (!(count_key in cookieObj)) {
         return 0
     }
     try {

@@ -22,7 +22,7 @@ h1{
 h2{
     font-size: 1.5rem;
 }
-p,span,a, a:link, a:visited, a:active {
+p,span,a, a:link{
     font-size: 1.3rem;
     text-decoration: none;
     color:var(--main-color-black);
@@ -84,7 +84,7 @@ p,span,a, a:link, a:visited, a:active {
     color: var(--main-color-green);
 }
 .panel_heading img{
-    height: 3rem;
+    height: 2rem;
     margin-right: 1rem;
 }
 
@@ -269,6 +269,9 @@ footer{
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
+.form_button_unavailable{
+    background-color: rgb(100,100,100);
+}
 .form_button:hover{
     background-color: white;
     color: var(--main-color-green)
@@ -279,7 +282,11 @@ footer{
     margin-top: 1rem;
     text-align: center;
 }
-
+.form_select{
+    font-size:1.5rem;
+    padding:0.5rem;
+    margin-top:1rem;
+}
 .anim_rise{
     animation: anikey-rise 0.5s ease-in-out forwards normal;
 }

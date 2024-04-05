@@ -1,67 +1,52 @@
 <!DOCTYPE html>
 <html>
-    <header>
+    <head>
         <meta charset="UTF-8"/>
+        <title>アンケート | 東京都立大学 サークル紹介 QRチェックイン</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <script type="text/javascript" src="js/cookieControl.js"></script>
         <script type="text/javascript" src="js/serverAction.js"></script>
-        <script defer type="text/javascript" src="js/uiControl.js"></script>
-        <script defer type="text/javascript" src="js/getUserInfo.js"></script>
-    </header>
+        <script type="text/javascript" src="js/uiControl.js"></script>
+        <script type="text/javascript" src="js/footerControl.js"></script> 
+        <script type="text/javascript" src="js/surveyControl.js"></script>
+    </head>
     <body>
         <div class="landscape_wrapper modal_full">
             <img class="modal_icon" src="img/fontawesome/exclamation-solid.svg">
             <h1>端末を縦にしてご利用ください</h1>
         </div>
-        <div class="error_wrapper modal_full modal_hide">
+        <div class="error_wrapper modal_full modal_hide" id="error-modal">
             <h1>エラー</h1>
             <img class="modal_icon svg_red" src="img/fontawesome/exclamation-solid.svg">
             <h3 id="error-text">Error Text</h3>
+            <h2>トップへ移動します</h2>
+        </div>
+        <div class="checkin_wrapper modal_full modal_hide" id="done-modal">
+            <h1>送信しました！</h1>
+            <img class="modal_icon svg_green" src="img/fontawesome/circle-check-regular.svg">
             <h2>ダッシュボードへ移動します</h2>
         </div>
-        <div class="loading_wrapper modal_full modal_show" id="loading-modal">
-            <h1 id="loading-header">Loading...</h1>
+        <div class="loading_wrapper modal_full modal_hide" id="loading-modal">
+            <h1 id="loading-header">送信中...</h1>
             <div class="loader modal_loader"></div>
         </div>
         <div class="bg"></div>
         <div class="container">
             <div class="panel_wrapper">
-                <div class="panel_container panel_top" id="info-lastCheckin">
-                    <div class="panel">
-                        <div class="panel_heading">
-                            <img class="svg_green" src="img/fontawesome/circle-check-regular.svg">
-                            <h1 id="checkin-header">Checked in!</h1>
-                        </div>
-                        <p id="checkin-msg">ご協力ありがとうございます！</p>
-                        <div class="panel_sub" id="checkin-place-wrapper">
-                            <h2>場所</h2>
-                            <span id="checkin-place">Place PLaceHolder</span>
-                        </div>
-                        <div class="panel_sub" id="checkin-group-wrapper">
-                            <h2>団体</h2>
-                            <span id="checkin-group">Group Placeholder</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel_container panel_card panel_hide" id="info-survey">
+                <div class="panel_container panel_top">
                     <div class="panel">
                         <div class="panel_heading">
                             <img class="svg_green" src="img/fontawesome/user-solid.svg">
-                            <h1>アンケートのお願い</h1>
+                            <h1>アンケート</h1>
                         </div>
-                        <p>あなたの学部と学科を教えてください！</p>
-                        <div class="panel_sub">
-                            <a class="button button_pop">回答する</a>
-                        </div>              
-                    </div>
-                </div>
-                <div class="panel_container panel_card panel_hide" id="info-sub">
-                    <div class="panel">
-                        <div class="panel_heading">
-                            <h1 id="info-sub-heading"></h1>
-                        </div>
-                        <p id="info-sub-p"></p>           
+                        <p>あなたの学部・学科を選択してください</p>
+                        <form class="form_wrapper">
+                            <select class="form_select" id="form-select-affiliation">
+                                <option selected disabled value="0">選択してください</option>
+                            </select>
+                            <button type="button" class="form_button button_pop form_button_unavailable" id="btn-post">送信</button>
+                        </form>
                     </div>
                 </div>
             </div>
