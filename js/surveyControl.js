@@ -42,7 +42,7 @@
             "value":6,
             "department": [
                 { "value": 1, "name": "情報科学科" },
-                { "value": 2, "name": "電子情報システム工学科" },
+                { "value": 2, "name": "電気電子工学科" },
                 { "value": 3, "name": "機械システム工学科" },
                 { "value": 4, "name": "航空宇宙システム工学科" },
                 { "value": 5, "name": "インダストリアルアート学科" },

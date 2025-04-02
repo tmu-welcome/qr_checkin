@@ -1,6 +1,6 @@
 const uid_key = "uid"
 const count_key = "count"
-const cookie_expire = new Date("2024-05-01").toUTCString();
+const cookie_expire = new Date("2025-05-01").toUTCString();
 
 function getCookieObject() {
     let cookie = document.cookie
