@@ -46,7 +46,7 @@
     }
     if (userInfo.body.checkinCount > 9) {
         changeInnerHtml("info-sub-heading", "Amazing!");
-        changeInnerHtml("info-sub-p", "沢山のご来場ありがとうございます！<br>運営者冥利に尽きます")
+        changeInnerHtml("info-sub-p", "沢山のご来場ありがとうございます！")
         setInterval(() => {
             risePanel("info-sub")
         }, 3000)
